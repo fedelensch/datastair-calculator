@@ -27,7 +27,7 @@ class Dataset:
     def __init__(self):
         pass
 
-    @staticmethod
+    @staticmethod # given a string -> return a list separating each element by commas.
     def get(**vars):
         if len(vars) == 1:
             x = vars["x"]
@@ -40,14 +40,13 @@ class Dataset:
                 [float(ydata) for ydata in y.split(",")],
             )
 
-    @staticmethod
+    @staticmethod # given a tuple -> split in x and y variables it's two elements to return calculations with two variables | given a list -> return calculations with one variable.
     def calculate(dataset):
         if type(dataset) == tuple:
             x, y = dataset[0], dataset[1]
             return {
                 "COVARIANCE": str(statistics.covariance(x, y)),
                 "CORRELATION": str(statistics.correlation(x, y)),
-                # "LINEAR REGRESSION" : statistics.linear_regression(x, y)
             }
         elif type(dataset) == list:
             x = dataset
@@ -64,7 +63,6 @@ class Dataset:
                 "SAMPLE STANDARD DEVIATION": str(statistics.stdev(x)),
                 "POPULATION VARIANCE": str(statistics.pvariance(x)),
                 "POPULATION STANDARD DEVIATION": str(statistics.pstdev(x)),
-                # "QUANTILES": str(statistics.quantiles(x)),
             }
 
 
@@ -86,7 +84,7 @@ class Handler:
         self.dataset = Dataset()
         self.validator = re.compile(r"^\d+(\.?\d+)?+(,\s?\d+(\.?\d+)?)+$")
 
-    def keyboard_clicked(self, e: ControlEvent):
+    def keyboard_clicked(self, e: ControlEvent): # handles the keyboard using references and data properties of keys (buttons).
         data = e.control.data
         if (data in "Clear") or (self.input.current.value == "Input Error"):
             if data in ("Clear", "Backspace", "Submit", ".", ","):
@@ -119,7 +117,7 @@ class Handler:
         self.input.current.focus()
         self.page.update()
 
-    def submit_clicked(self, e: ControlEvent):
+    def submit_clicked(self, e: ControlEvent): # validates the calculation input and appends the result and size of the dataset given to input, uses references system too --see <https://flet.dev/blog/control-refs/> for details about references system.
         validator = re.compile(r"^\d+(\.?\d+)?+(,\s?\d+(\.?\d+)?)+$")
         if validator.search(self.input.current.value) == None:
             self.input.current.value = "Input Error"
@@ -162,10 +160,10 @@ class Handler:
 
         self.page.update()
 
-    def clear_output(self, e: ControlEvent):
+    def clear_output(self, e: ControlEvent): # clear the result (output) when "on_dismiss" event is triggered
         self.output.current.controls.clear()
 
-    def toggle_sheets(self, e: ControlEvent):
+    def toggle_dialogs(self, e: ControlEvent): # handles the about, details and license dialogs.
         data = e.control.data
         if data in ("Info", "Close", "Back"):
             if self.about.current.open == False:
