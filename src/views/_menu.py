@@ -50,7 +50,7 @@ class Menu(Row):
                                 },
                             ),
                             content=Icon("CLOSE_ROUNDED", size=20),
-                            on_click=self.handler.toggle_sheets,
+                            on_click=self.handler.toggle_dialogs,
                         ),
                         alignment=Alignment(x=-1, y=1),
                         padding=10,
@@ -119,7 +119,7 @@ class Menu(Row):
                                     ],
                                     alignment="START",
                                 ),
-                                on_click=self.handler.toggle_sheets,
+                                on_click=self.handler.toggle_dialogs,
                             ),
                             ElevatedButton(
                                 height=56,
@@ -147,7 +147,7 @@ class Menu(Row):
                                     ],
                                     alignment="START",
                                 ),
-                                on_click=self.handler.toggle_sheets,
+                                on_click=self.handler.toggle_dialogs,
                             ),
                         ],
                         spacing=2,
@@ -187,7 +187,7 @@ class Menu(Row):
                                 },
                             ),
                             content=Icon("ARROW_BACK_IOS_ROUNDED", size=16),
-                            on_click=self.handler.toggle_sheets,
+                            on_click=self.handler.toggle_dialogs,
                         ),
                         alignment=Alignment(x=-1, y=1),
                         padding=10,
@@ -405,7 +405,7 @@ class Menu(Row):
                         },
                     ),
                     content=Text("OK"),
-                    on_click=self.handler.toggle_sheets,
+                    on_click=self.handler.toggle_dialogs,
                 )
             ],
             ref=self.handler.license,
@@ -446,7 +446,7 @@ class Menu(Row):
                 overlay_color={"": "#3A3B3C", "PRESSED": "#292929"},
             ),
             content=Icon("INFO_OUTLINED"),
-            on_click=self.handler.toggle_sheets,
+            on_click=self.handler.toggle_dialogs,
         )
         self.history = ElevatedButton(
             height=40,
