@@ -1,4 +1,4 @@
-A Statistical Calculator, Powerful and simple to use.
+A Powerful Statistical Calculator and simple to use.
 Made with Flet!
 
 To run the app:
