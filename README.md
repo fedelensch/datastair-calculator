@@ -1,5 +1,5 @@
 A Statistical Calculator, Powerful and simple to use.
-Made with Flet!
+For fun project made with Flet!
 
 To run the app:
 
