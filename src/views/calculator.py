@@ -19,7 +19,7 @@
 #=========================================================================#
 
 from flet import *
-from interface import Handler
+from controllers import Handler
 
 
 class Calculator(Column):
