@@ -431,7 +431,8 @@ class Menu(Row):
                 shape={"": RoundedRectangleBorder(radius=4)},
                 overlay_color={"": "#3A3B3C", "PRESSED": "#292929"},
             ),
-            url="https://www.youtube.com/shorts/SXHMnicI6Pg",
+            url="",
+            disabled=True,
             content=Icon("ONDEMAND_VIDEO"),
         )
         self.info = ElevatedButton(
