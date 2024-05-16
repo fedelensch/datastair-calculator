@@ -20,7 +20,7 @@
 
 from flet import *
 from controllers import Handler
-from assets.icons import base64icon
+from assets.icon import base64icon
 
 
 class Menu(Row):
