@@ -1,8 +1,10 @@
 A Statistical Calculator, Powerful and simple to use.
-For fun project made with Flet!
+Fun project made with Flet!
 
-To run the app:
+-To run the app-
+Download and install,
+or clone repo and install requirements and then:
 
 ```
-[app_directory] $ flet run main.py
+[src_directory] $ flet run main.py
 ```
