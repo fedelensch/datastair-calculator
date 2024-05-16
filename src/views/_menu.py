@@ -20,6 +20,7 @@
 
 from flet import *
 from controllers import Handler
+from assets.icons import base64icon
 
 
 class Menu(Row):
@@ -58,7 +59,7 @@ class Menu(Row):
                     Column(
                         controls=[
                             Image(
-                                src="assets/icon_image.png",
+                                src_base64=base64icon,
                                 height=100,
                                 width=100,
                                 filter_quality=FilterQuality.MEDIUM,
