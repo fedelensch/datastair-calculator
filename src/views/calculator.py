@@ -1,6 +1,8 @@
 #=========================================================================#
+ #               This file is part of Datastair Calculator               #
+ #        https://github.com/federicolencina/datastair-calculator        #
  #                                                                       #
- #     Copyright 2024 Federico Lencina - GNU General Public License      #
+ #                      GNU General Public License                       #
  #                                                                       #
  #     This program is free software; you can redistribute it and/or     #
  #    modify it under the terms of the GNU General Public License as     #
@@ -16,7 +18,9 @@
  #              License along with this program. If not, see             #
  #                    <https://www.gnu.org/licenses/>.                   #
  #                                                                       #
+ #                    Copyright 2024 Federico Lencina                    #
 #=========================================================================#
+
 
 from flet import *
 from controllers import Handler
